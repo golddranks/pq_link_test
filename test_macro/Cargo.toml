@@ -1,0 +1,12 @@
+[package]
+name = "test_dependency"
+version = "1.0.0"
+
+[dependencies]
+pq-sys = { git = "https://github.com/Raniz85/pq-sys", branch = "25-openssl_sys-static" }
+
+[lib]
+proc-macro = true
+
+[features]
+openssl-static = ["pq-sys/openssl-static"]
